@@ -92,6 +92,23 @@ app.post("/login",(req,res)=>{
 
 });
 
+app.post("/placeorder",(req,res)=>{
+    console.log(req.body);
+    const item = req.body.item
+    const quantity = req.body.quantity
+    const method = req.body.method
+
+    const SQL = `INSERT INTO orders(item,quantity,mode) VALUES($1,$2,$3)`
+    db.query(SQL,[item,quantity,method],(err,data)=>{
+        if(err){
+            console.log(err);
+            return res.json(err);
+        }
+        else{
+            return res.sendStatus(200);
+        }
+    })
+})
 
 
 app.listen(port,()=>{

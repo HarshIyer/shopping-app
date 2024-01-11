@@ -81,3 +81,32 @@
 .login-form-input:hover{
   border: 1px solid #054a91;
 }
+
+.order-btn{
+  padding:10px;
+  border-radius: 5px;
+  border:1px transparent;
+  margin-top: 20px;
+  margin-left: 20px;
+  height:80px;
+  width:300px;
+  transition: all 0.5s ease-out;
+  font-size: 30px;
+}
+
+.order-btn:hover{
+  border:1px solid black;
+  cursor:pointer;
+  background-color: rgb(195, 193, 193);
+}
+
+
+.form-btn{
+  font-weight: bold;
+  transition: all 0.5s ease-out;
+}
+
+.form-btn:hover{
+  cursor: pointer;
+  background-color: ;
+}

@@ -11,6 +11,8 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import { LocaleRouteNormalizer } from 'next/dist/server/future/normalizers/locale-route-normalizer';
+
 
 
 const app =() =>{

@@ -27,7 +27,10 @@ const LoginPage = () =>{
         })
         .catch((err)=>{
             console.log(err);
-            if(err.response.status===304){
+            if (!err.response) {
+                alert("Server is down. Please try again later");
+            }
+            else if(err.response.status===304){
                 alert("Invalid Credentials");
             }
             else if(err.response.status===404){
